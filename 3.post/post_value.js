@@ -43,7 +43,7 @@ http.createServer((req, res)=>{
         res.writeHead(200, {'content-type':'text/html; charset=utf-8'});
         
         if(pw1 == pw2){
-            result = "<h1>비밀번호가 동일합니다</h1>"
+            result = "<script>alert('비밀번호가 동일합니다')</script>"
             res.write(result)
 
         }else{
