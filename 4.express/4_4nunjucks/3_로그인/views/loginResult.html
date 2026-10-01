@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 서버에서 전달해주는 데이터를 활용해서 화면에 출력-->
+     {% if know %} 
+        <h1>{{know}}님 환영합니다.</h1>
+    {% else %}
+        <h1>다시 로그인 해주세요.</h1>
+    {% endif %}
+</body>
+</html>
