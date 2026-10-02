@@ -5,6 +5,7 @@ const nunjucks = require('nunjucks')
 const session = require('express-session')//세션 관리 기능을 불러온다.
 const fileStore = require('session-file-store')(session)//세션을 파일에 저장할 수 있는 기능을 준비한다.
 const mainRouter = require('./routes/mainRouter')
+const userRouter = require('./routes/userRouter')
 // post 처리를 위한 등록
 app.use(express.urlencoded({ extended: true }))
 
@@ -31,5 +32,6 @@ app.use(
 
 // 라우터 등록
 app.use('/', mainRouter)
+app.use('/user', userRouter)
 
 app.listen(3000)

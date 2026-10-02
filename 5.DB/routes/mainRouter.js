@@ -3,7 +3,13 @@ const router = express.Router()
 
 // 메인 경로 처리
 router.get('/', (req, res) => {
-    res.render('main')
+    if(req.session.nick){
+        console.log('메인 라우터 확인', req.session.nick)
+        res.render('main', {nick : req.session.nick})
+    }else{
+        res.render('main')
+    }
+    
 })
 
 router.get('/join', (req, res) => {
